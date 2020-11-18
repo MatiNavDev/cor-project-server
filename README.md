@@ -15,7 +15,47 @@ principal = `http://localhost:3007/workast-api/v1`
 1. `nvm use 12` - Es necesario correr desde la version 12 en adelante debido al uso de `worker_threads`. [Documentation](https://nodejs.org/api/worker_threads.html)
 1. `npm i`
 1. `node server/` - Levanta la API Rest
-1. (POST) `${mainRoute}/word-counter`. Incluir minimamente los parametros requeridos.
+1. (POST) `${mainRoute}/word-counter`. Incluir minimamente los parametros requeridos. Ejemplos de `body`:
+
+```
+      {
+        f: 3,
+        c: 3,
+        lettersArray: ["OIE", "IIX", "EXE"],
+      }
+```
+
+```
+      {
+        f: 1,
+        c: 10,
+        lettersArray: ["EIOIEIOEIO"],
+      }
+```
+
+```
+      {
+        f: 5,
+        c: 5,
+        lettersArray: ["EAEAE", "AIIIA", "EIOIE", "AIIIA", "EAEAE"],
+      }
+```
+
+```
+      {
+        f: 7,
+        c: 2,
+        lettersArray: ["OX", "IO", "EX", "II", "OX", "IE", "EX"],
+      }
+```
+
+```
+      {
+        f: 1,
+        c: 1,
+        lettersArray: ["E"],
+      }
+```
 
 ---
 
